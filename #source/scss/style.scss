@@ -1,0 +1,144 @@
+@import "nullstyle.scss";
+
+body{
+	background: FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+	height: 100%;
+  	overflow: hidden;
+  	min-height: 100%;
+	
+}
+
+header {
+	margin: 20px 20px 0 20px;
+}
+
+@media (max-width: 500px) {
+	header {
+		margin: 0;
+	}
+}
+
+.navigation-menu > ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.profile__avatar img{
+	height: 35px;
+}
+
+.inner-list_text {
+	padding: 10px 0 0 0;
+}
+
+.navigation-menu > ul li a, .profile {
+	display: block;
+	background: #ececed;
+	padding: 15px 20px;
+	font-size: 14px;
+	color: #454547;
+	text-decoration: none;
+	text-transform:uppercase;
+	transition: all 0.3s ease;
+   } 
+
+   .navigation-menu  li a:hover, .profile:hover{
+	background: #454547;
+	color: #ffffff;
+	box-shadow: 1px 5px 10px -5px black;
+	transition: all 0.3s ease;
+   }   
+
+   .navigation-menu  li a:focus, .profile:focus {
+	background: #7e7e7e;
+	color: #ffffff;
+	box-shadow: 1px 5px 10px -5px black;
+	transition: all 0.3s ease;
+   }    
+
+ // sub
+
+   ul.inner-list {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: absolute;
+	width: 386px;
+	margin: 0 20px 0 0;
+	display: none;
+	right: 0;
+   }
+
+   @media (max-width: 400px) {
+	ul.inner-list {
+		margin: 0;
+	}
+}
+
+
+   ul.inner-list li, ul.inner-list__more li  {
+	width: 32%;
+	padding-bottom: 10 px;
+	margin-top: 10px;
+	margin-bottom: 2%;
+	position: relative;
+   }
+
+   ul.inner-list li a, ul.inner-list__more li a{
+	padding: 15px;
+	text-transform: none;
+	background: #e4e4e5;
+	text-align: center;
+   }    
+
+ #btn {
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+   }
+
+.btn {
+	cursor: pointer;
+
+}
+
+ #btn:checked ~ .inner-list {
+	display: flex;
+ }
+
+ // More
+
+.more__profile {
+	background-color: #e4e4e5;
+	padding: 10px 152px 10px 152px;
+	color: #454547;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+ul.inner-list__more 
+{
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	min-width: 100%;
+	margin: 0 20px 0 0;
+	display: none;
+
+}
+
+ #btn__more {
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+	//display: none;
+   }
+
+ #btn__more:checked ~ .inner-list__more {
+	display: flex;
+ }
